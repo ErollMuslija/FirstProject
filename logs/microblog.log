@@ -1,0 +1,103 @@
+2021-06-16 15:37:21,457 ERROR: Exception on /search [GET] [in /Users/apple/Desktop/Flask2/microblog/venv/lib/python3.8/site-packages/flask/app.py:1454]
+Traceback (most recent call last):
+  File "/Users/apple/Desktop/Flask2/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/apple/Desktop/Flask2/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/apple/Desktop/Flask2/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/apple/Desktop/Flask2/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/Users/apple/Desktop/Flask2/microblog/venv/lib/python3.8/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/apple/Desktop/Flask2/microblog/app/main/routes.py", line 152, in search
+    posts, total = Post.search(g.search_form.q.data, page,
+  File "/Users/apple/Desktop/Flask2/microblog/app/models.py", line 15, in search
+    ids, total = query_index(cls.__tablename__, expression, page, per_page)
+  File "/Users/apple/Desktop/Flask2/microblog/app/search.py", line 22, in query_index
+    search = current_app.elasticsearch.search(
+  File "/Users/apple/Desktop/Flask2/microblog/venv/lib/python3.8/site-packages/elasticsearch/client/utils.py", line 168, in _wrapped
+    return func(*args, params=params, headers=headers, **kwargs)
+  File "/Users/apple/Desktop/Flask2/microblog/venv/lib/python3.8/site-packages/elasticsearch/client/__init__.py", line 1670, in search
+    return self.transport.perform_request(
+  File "/Users/apple/Desktop/Flask2/microblog/venv/lib/python3.8/site-packages/elasticsearch/transport.py", line 415, in perform_request
+    raise e
+  File "/Users/apple/Desktop/Flask2/microblog/venv/lib/python3.8/site-packages/elasticsearch/transport.py", line 381, in perform_request
+    status, headers_response, data = connection.perform_request(
+  File "/Users/apple/Desktop/Flask2/microblog/venv/lib/python3.8/site-packages/elasticsearch/connection/http_urllib3.py", line 275, in perform_request
+    self._raise_error(response.status, raw_data)
+  File "/Users/apple/Desktop/Flask2/microblog/venv/lib/python3.8/site-packages/elasticsearch/connection/base.py", line 330, in _raise_error
+    raise HTTP_EXCEPTIONS.get(status_code, TransportError)(
+elasticsearch.exceptions.NotFoundError: NotFoundError(404, 'index_not_found_exception', 'no such index [post]', post, index_or_alias)
+2021-06-16 15:38:18,782 ERROR: Exception on /search [GET] [in /Users/apple/Desktop/Flask2/microblog/venv/lib/python3.8/site-packages/flask/app.py:1454]
+Traceback (most recent call last):
+  File "/Users/apple/Desktop/Flask2/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/apple/Desktop/Flask2/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/apple/Desktop/Flask2/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/apple/Desktop/Flask2/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/Users/apple/Desktop/Flask2/microblog/venv/lib/python3.8/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/apple/Desktop/Flask2/microblog/app/main/routes.py", line 152, in search
+    posts, total = Post.search(g.search_form.q.data, page,
+  File "/Users/apple/Desktop/Flask2/microblog/app/models.py", line 15, in search
+    ids, total = query_index(cls.__tablename__, expression, page, per_page)
+  File "/Users/apple/Desktop/Flask2/microblog/app/search.py", line 22, in query_index
+    search = current_app.elasticsearch.search(
+  File "/Users/apple/Desktop/Flask2/microblog/venv/lib/python3.8/site-packages/elasticsearch/client/utils.py", line 168, in _wrapped
+    return func(*args, params=params, headers=headers, **kwargs)
+  File "/Users/apple/Desktop/Flask2/microblog/venv/lib/python3.8/site-packages/elasticsearch/client/__init__.py", line 1670, in search
+    return self.transport.perform_request(
+  File "/Users/apple/Desktop/Flask2/microblog/venv/lib/python3.8/site-packages/elasticsearch/transport.py", line 415, in perform_request
+    raise e
+  File "/Users/apple/Desktop/Flask2/microblog/venv/lib/python3.8/site-packages/elasticsearch/transport.py", line 381, in perform_request
+    status, headers_response, data = connection.perform_request(
+  File "/Users/apple/Desktop/Flask2/microblog/venv/lib/python3.8/site-packages/elasticsearch/connection/http_urllib3.py", line 275, in perform_request
+    self._raise_error(response.status, raw_data)
+  File "/Users/apple/Desktop/Flask2/microblog/venv/lib/python3.8/site-packages/elasticsearch/connection/base.py", line 330, in _raise_error
+    raise HTTP_EXCEPTIONS.get(status_code, TransportError)(
+elasticsearch.exceptions.NotFoundError: NotFoundError(404, 'index_not_found_exception', 'no such index [post]', post, index_or_alias)
+2021-06-16 15:54:29,384 ERROR: Exception on /search [GET] [in /Users/apple/Desktop/Flask2/microblog/venv/lib/python3.8/site-packages/flask/app.py:1454]
+Traceback (most recent call last):
+  File "/Users/apple/Desktop/Flask2/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/apple/Desktop/Flask2/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/apple/Desktop/Flask2/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/apple/Desktop/Flask2/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/Users/apple/Desktop/Flask2/microblog/venv/lib/python3.8/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/apple/Desktop/Flask2/microblog/app/main/routes.py", line 152, in search
+    posts, total = Post.search(g.search_form.q.data, page,
+  File "/Users/apple/Desktop/Flask2/microblog/app/models.py", line 15, in search
+    ids, total = query_index(cls.__tablename__, expression, page, per_page)
+  File "/Users/apple/Desktop/Flask2/microblog/app/search.py", line 22, in query_index
+    search = current_app.elasticsearch.search(
+  File "/Users/apple/Desktop/Flask2/microblog/venv/lib/python3.8/site-packages/elasticsearch/client/utils.py", line 168, in _wrapped
+    return func(*args, params=params, headers=headers, **kwargs)
+  File "/Users/apple/Desktop/Flask2/microblog/venv/lib/python3.8/site-packages/elasticsearch/client/__init__.py", line 1670, in search
+    return self.transport.perform_request(
+  File "/Users/apple/Desktop/Flask2/microblog/venv/lib/python3.8/site-packages/elasticsearch/transport.py", line 415, in perform_request
+    raise e
+  File "/Users/apple/Desktop/Flask2/microblog/venv/lib/python3.8/site-packages/elasticsearch/transport.py", line 381, in perform_request
+    status, headers_response, data = connection.perform_request(
+  File "/Users/apple/Desktop/Flask2/microblog/venv/lib/python3.8/site-packages/elasticsearch/connection/http_urllib3.py", line 275, in perform_request
+    self._raise_error(response.status, raw_data)
+  File "/Users/apple/Desktop/Flask2/microblog/venv/lib/python3.8/site-packages/elasticsearch/connection/base.py", line 330, in _raise_error
+    raise HTTP_EXCEPTIONS.get(status_code, TransportError)(
+elasticsearch.exceptions.NotFoundError: NotFoundError(404, 'index_not_found_exception', 'no such index [post]', post, index_or_alias)
+2021-06-16 16:02:06,788 INFO: Microblog startup [in /Users/apple/Desktop/Flask2/microblog/app/__init__.py:77]
+2021-06-16 16:02:47,206 INFO: Microblog startup [in /Users/apple/Desktop/Flask2/microblog/app/__init__.py:77]
+2021-06-16 16:03:57,420 INFO: Microblog startup [in /Users/apple/Desktop/Flask2/microblog/app/__init__.py:77]
+2021-06-16 16:04:16,726 INFO: Microblog startup [in /Users/apple/Desktop/Flask2/microblog/app/__init__.py:77]
+2021-06-16 16:09:59,951 INFO: Microblog startup [in /Users/apple/Desktop/Flask2/microblog/app/__init__.py:77]
+2021-06-16 16:10:52,879 INFO: Microblog startup [in /Users/apple/Desktop/Flask2/microblog/app/__init__.py:77]
+2021-06-16 16:12:13,684 INFO: Microblog startup [in /Users/apple/Desktop/Flask2/microblog/app/__init__.py:77]
+2021-06-17 09:33:24,807 INFO: Microblog startup [in /Users/apple/Desktop/Flask2/microblog/app/__init__.py:77]
+2021-06-17 14:07:02,083 INFO: Microblog startup [in /Users/apple/Desktop/Flask2/microblog/app/__init__.py:77]
+2021-06-17 14:09:04,442 INFO: Microblog startup [in /Users/apple/Desktop/Flask2/microblog/app/__init__.py:77]
