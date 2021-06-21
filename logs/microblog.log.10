@@ -1,4 +1,4 @@
-2021-06-15 13:51:39,829 ERROR: Exception on /auth/login [GET] [in /Users/apple/Desktop/Flask2/microblog/venv/lib/python3.8/site-packages/flask/app.py:1454]
+2021-06-15 13:51:41,187 ERROR: Exception on /auth/login [GET] [in /Users/apple/Desktop/Flask2/microblog/venv/lib/python3.8/site-packages/flask/app.py:1454]
 Traceback (most recent call last):
   File "/Users/apple/Desktop/Flask2/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 2070, in wsgi_app
     response = self.full_dispatch_request()
@@ -41,7 +41,8 @@ Traceback (most recent call last):
   File "/Users/apple/Desktop/Flask2/microblog/venv/lib/python3.8/site-packages/werkzeug/routing.py", line 2305, in build
     raise BuildError(endpoint, values, method, self)
 werkzeug.routing.BuildError: Could not build url for endpoint 'register'. Did you mean 'auth.register' instead?
-2021-06-15 13:51:40,224 ERROR: Exception on /auth/login [GET] [in /Users/apple/Desktop/Flask2/microblog/venv/lib/python3.8/site-packages/flask/app.py:1454]
+2021-06-16 09:29:04,047 INFO: Microblog startup [in /Users/apple/Desktop/Flask2/microblog/app/__init__.py:74]
+2021-06-16 09:29:10,648 ERROR: Exception on /auth/login [GET] [in /Users/apple/Desktop/Flask2/microblog/venv/lib/python3.8/site-packages/flask/app.py:1454]
 Traceback (most recent call last):
   File "/Users/apple/Desktop/Flask2/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 2070, in wsgi_app
     response = self.full_dispatch_request()
