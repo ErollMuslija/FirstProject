@@ -1,5 +1,4 @@
-2021-06-18 11:30:08,323 INFO: Microblog startup [in /Users/apple/Desktop/FirstProject/app/__init__.py:77]
-2021-06-18 11:30:10,581 ERROR: Exception on /user/alban/popup [GET] [in /Users/apple/Desktop/FirstProject/env/lib/python3.8/site-packages/flask/app.py:1454]
+2021-06-22 13:14:47,127 ERROR: Exception on /messages [GET] [in /Users/apple/Desktop/FirstProject/env/lib/python3.8/site-packages/flask/app.py:1454]
 Traceback (most recent call last):
   File "/Users/apple/Desktop/FirstProject/env/lib/python3.8/site-packages/flask/app.py", line 2070, in wsgi_app
     response = self.full_dispatch_request()
@@ -11,8 +10,8 @@ Traceback (most recent call last):
     return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
   File "/Users/apple/Desktop/FirstProject/env/lib/python3.8/site-packages/flask_login/utils.py", line 272, in decorated_view
     return func(*args, **kwargs)
-  File "/Users/apple/Desktop/FirstProject/app/main/routes.py", line 168, in user_popup
-    return render_template('user_popup.html', user=user, form=form)
+  File "/Users/apple/Desktop/FirstProject/app/main/routes.py", line 201, in messages
+    return render_template('messages.html', messages=messages.items,
   File "/Users/apple/Desktop/FirstProject/env/lib/python3.8/site-packages/flask/templating.py", line 148, in render_template
     ctx.app.jinja_env.get_or_select_template(template_name_or_list),
   File "/Users/apple/Desktop/FirstProject/env/lib/python3.8/site-packages/jinja2/environment.py", line 1068, in get_or_select_template
@@ -21,78 +20,16 @@ Traceback (most recent call last):
     return self._load_template(name, globals)
   File "/Users/apple/Desktop/FirstProject/env/lib/python3.8/site-packages/jinja2/environment.py", line 958, in _load_template
     template = self.loader.load(self, name, self.make_globals(globals))
-  File "/Users/apple/Desktop/FirstProject/env/lib/python3.8/site-packages/jinja2/loaders.py", line 137, in load
-    code = environment.compile(source, name, filename)
-  File "/Users/apple/Desktop/FirstProject/env/lib/python3.8/site-packages/jinja2/environment.py", line 757, in compile
-    self.handle_exception(source=source_hint)
-  File "/Users/apple/Desktop/FirstProject/env/lib/python3.8/site-packages/jinja2/environment.py", line 925, in handle_exception
-    raise rewrite_traceback_stack(source=source)
-  File "/Users/apple/Desktop/FirstProject/app/templates/user_popup.html", line 13, in template
-    {{ _('%(count)d following', count=user.followed.count()) }
-jinja2.exceptions.TemplateSyntaxError: unexpected '}'
-2021-06-18 11:30:13,099 ERROR: Exception on /user/alban/popup [GET] [in /Users/apple/Desktop/FirstProject/env/lib/python3.8/site-packages/flask/app.py:1454]
-Traceback (most recent call last):
-  File "/Users/apple/Desktop/FirstProject/env/lib/python3.8/site-packages/flask/app.py", line 2070, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/Users/apple/Desktop/FirstProject/env/lib/python3.8/site-packages/flask/app.py", line 1515, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/Users/apple/Desktop/FirstProject/env/lib/python3.8/site-packages/flask/app.py", line 1513, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/Users/apple/Desktop/FirstProject/env/lib/python3.8/site-packages/flask/app.py", line 1499, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
-  File "/Users/apple/Desktop/FirstProject/env/lib/python3.8/site-packages/flask_login/utils.py", line 272, in decorated_view
-    return func(*args, **kwargs)
-  File "/Users/apple/Desktop/FirstProject/app/main/routes.py", line 168, in user_popup
-    return render_template('user_popup.html', user=user, form=form)
-  File "/Users/apple/Desktop/FirstProject/env/lib/python3.8/site-packages/flask/templating.py", line 148, in render_template
-    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
-  File "/Users/apple/Desktop/FirstProject/env/lib/python3.8/site-packages/jinja2/environment.py", line 1068, in get_or_select_template
-    return self.get_template(template_name_or_list, parent, globals)
-  File "/Users/apple/Desktop/FirstProject/env/lib/python3.8/site-packages/jinja2/environment.py", line 997, in get_template
-    return self._load_template(name, globals)
-  File "/Users/apple/Desktop/FirstProject/env/lib/python3.8/site-packages/jinja2/environment.py", line 958, in _load_template
-    template = self.loader.load(self, name, self.make_globals(globals))
-  File "/Users/apple/Desktop/FirstProject/env/lib/python3.8/site-packages/jinja2/loaders.py", line 137, in load
-    code = environment.compile(source, name, filename)
-  File "/Users/apple/Desktop/FirstProject/env/lib/python3.8/site-packages/jinja2/environment.py", line 757, in compile
-    self.handle_exception(source=source_hint)
-  File "/Users/apple/Desktop/FirstProject/env/lib/python3.8/site-packages/jinja2/environment.py", line 925, in handle_exception
-    raise rewrite_traceback_stack(source=source)
-  File "/Users/apple/Desktop/FirstProject/app/templates/user_popup.html", line 13, in template
-    {{ _('%(count)d following', count=user.followed.count()) }
-jinja2.exceptions.TemplateSyntaxError: unexpected '}'
-2021-06-18 11:30:32,937 ERROR: Exception on /user/alban/popup [GET] [in /Users/apple/Desktop/FirstProject/env/lib/python3.8/site-packages/flask/app.py:1454]
-Traceback (most recent call last):
-  File "/Users/apple/Desktop/FirstProject/env/lib/python3.8/site-packages/flask/app.py", line 2070, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/Users/apple/Desktop/FirstProject/env/lib/python3.8/site-packages/flask/app.py", line 1515, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/Users/apple/Desktop/FirstProject/env/lib/python3.8/site-packages/flask/app.py", line 1513, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/Users/apple/Desktop/FirstProject/env/lib/python3.8/site-packages/flask/app.py", line 1499, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
-  File "/Users/apple/Desktop/FirstProject/env/lib/python3.8/site-packages/flask_login/utils.py", line 272, in decorated_view
-    return func(*args, **kwargs)
-  File "/Users/apple/Desktop/FirstProject/app/main/routes.py", line 168, in user_popup
-    return render_template('user_popup.html', user=user, form=form)
-  File "/Users/apple/Desktop/FirstProject/env/lib/python3.8/site-packages/flask/templating.py", line 148, in render_template
-    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
-  File "/Users/apple/Desktop/FirstProject/env/lib/python3.8/site-packages/jinja2/environment.py", line 1068, in get_or_select_template
-    return self.get_template(template_name_or_list, parent, globals)
-  File "/Users/apple/Desktop/FirstProject/env/lib/python3.8/site-packages/jinja2/environment.py", line 997, in get_template
-    return self._load_template(name, globals)
-  File "/Users/apple/Desktop/FirstProject/env/lib/python3.8/site-packages/jinja2/environment.py", line 958, in _load_template
-    template = self.loader.load(self, name, self.make_globals(globals))
-  File "/Users/apple/Desktop/FirstProject/env/lib/python3.8/site-packages/jinja2/loaders.py", line 137, in load
-    code = environment.compile(source, name, filename)
-  File "/Users/apple/Desktop/FirstProject/env/lib/python3.8/site-packages/jinja2/environment.py", line 757, in compile
-    self.handle_exception(source=source_hint)
-  File "/Users/apple/Desktop/FirstProject/env/lib/python3.8/site-packages/jinja2/environment.py", line 925, in handle_exception
-    raise rewrite_traceback_stack(source=source)
-  File "/Users/apple/Desktop/FirstProject/app/templates/user_popup.html", line 13, in template
-    {{ _('%(count)d following', count=user.followed.count()) }
-jinja2.exceptions.TemplateSyntaxError: unexpected '}'
-2021-06-18 11:32:25,929 INFO: Microblog startup [in /Users/apple/Desktop/FirstProject/app/__init__.py:77]
-2021-06-18 16:32:22,924 INFO: Microblog startup [in /Users/apple/Desktop/FirstProject/app/__init__.py:77]
-2021-06-21 09:19:50,793 INFO: Microblog startup [in /Users/apple/Desktop/FirstProject/app/__init__.py:77]
-2021-06-21 14:21:11,894 INFO: Microblog startup [in /Users/apple/Desktop/FirstProject/app/__init__.py:77]
+  File "/Users/apple/Desktop/FirstProject/env/lib/python3.8/site-packages/jinja2/loaders.py", line 125, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/Users/apple/Desktop/FirstProject/env/lib/python3.8/site-packages/flask/templating.py", line 59, in get_source
+    return self._get_source_fast(environment, template)
+  File "/Users/apple/Desktop/FirstProject/env/lib/python3.8/site-packages/flask/templating.py", line 95, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: messages.html
+2021-06-22 13:21:38,873 INFO: Microblog startup [in /Users/apple/Desktop/FirstProject/app/__init__.py:77]
+2021-06-22 14:16:11,466 INFO: Microblog startup [in /Users/apple/Desktop/FirstProject/app/__init__.py:77]
+2021-06-22 14:16:25,870 INFO: Microblog startup [in /Users/apple/Desktop/FirstProject/app/__init__.py:77]
+2021-06-22 14:24:06,290 INFO: Microblog startup [in /Users/apple/Desktop/FirstProject/app/__init__.py:77]
+2021-06-22 14:40:32,694 INFO: Microblog startup [in /Users/apple/Desktop/FirstProject/app/__init__.py:77]
+2021-06-22 14:46:16,879 INFO: Microblog startup [in /Users/apple/Desktop/FirstProject/app/__init__.py:77]
